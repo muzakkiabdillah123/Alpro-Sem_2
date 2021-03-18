@@ -1,0 +1,52 @@
+﻿Soal Level Dasar
+1. Buatlah algoritma dalam bahasa C, yang menerima inputan tiga buah masukan bilangan bulat dan menampilkan hasil operasi (+,-,*,/) ketiga bilangan!
+2. Buatlah algoritma dalam bahasa C, yang menerima inputan tiga buah masukan bilangan pecahan (ril) dan menampilkan hasil operasi (+,-,*,/) ketiga bilangan!
+3. Buatlah algoritma dalam bahasa C, menjumlahkan kode ASCII dari karakter ‘1’ dan karakter ‘2’!
+4. Buatlah algoritma dalam bahasa C, mengkalikan kode ASCII dari karakter ‘A’ dan karakter ‘B’!
+5. Buatlah algoritma dalam bahasa C, menghitung kode ASCII dari karakter didalam rumus ((‘2’*‘w’)+(‘z’+’3’)/’X’)
+
+Soal Level Menengah
+6. Buatlah algoritma dalam bahasa C, mengkonversi dari mil ke kilometer dengan penetapan nilai mil ke kilometer (1.609 ditetapkan dalam konstanta)
+7. Buatlah algoritma dalam bahasa C, yang menerima inputan derajat celcius dan menampilkan hasil bilangan masukan menjadi derajat fahrenhit!(fahrenhit=>((9*celcius)/5)+32)
+8. Buatlah algoritma dalam bahasa C, yang menerima inputan derajat celcius dan menampilkan hasil bilangan masukan menjadi derajat reamur!( reamur =>(4*celcius)/5))
+9. Buatlah algoritma dalam bahasa C, untuk menghitung luas lingkaran dengan inputan jari-jari yang diinput dari keyboard (dan nilai π dibuatkan konstanta dengan nilai 3,14)
+10. Buatlah algoritma dalam bahasa C, yang menerima inputan tiga buah bilagan bulat berupa sisi atas, sisi alas, dan tinggi trapesium dan menampilkan luas trapesium
+
+Soal Level Mahir
+11. Buatlah algoritma dalam bahasa C, saya akan diberi hadiah jika rangking 1 di kelas, dan naik kelas
+12. Pak Eki memiliki N ekor bebek. Ia ingin menempatkan bebek-bebeknya tersebut pada kandang-kandang. Ia juga ingin agar setiap kandang berisi paling banyak M ekor bebek.
+Tentukan jumlah kandang paling sedikit yang diperlukan Pak Eki.
+Batasan
+1 ≤ N ≤ 1.000.000.000
+1 ≤ M ≤ 1.000.000.000
+Format Masukan
+Sebuah baris berisi sebuah bilangan bulat N dan M, dipisahkan oleh sebuah spasi.
+Format Keluaran
+Sebuah baris berisi jumlah kandang paling sedikit.
+Contoh Masukan
+12 5
+Contoh Keluaran
+3
+13. Pak Yaya membeli buah mangga dari petani sebesar Rp10.000 per kg. Kemudian mangga
+tersebut dijual lagi dengan harga Rp15.000. Berapa persen laba atau untung yang diperoleh
+Pak Yaya
+Contoh Masukan
+Harga beli (Rp) = 10000
+Harga jual (Rp) = 15000
+Contoh Keluaran
+Persen laba (%) = 50
+14. Bu Raisa bersepeda dari rumah ke pasar dengan kecepatan 130 meter/menit. Ia tiba di
+pasar dalam waktu 15 menit. Berapa meter jarak rumah Bu Raisa dari pasar?
+Contoh Masukan
+Waktu (menit) = 15
+kecepatan (meter/menit) = 130
+Contoh Keluaran
+Jarak (meter) = 1950
+15.
+Suatu pekerjaan bisa diselesaikan oleh 8 pekerja dalam waktu 20 hari. Jika diasumsikan kecepatan setiap pekerja sama, maka 5 orang pekerja bisa menyelesaikan pekerjaan tersebut dalam waktu
+Contoh Masukan
+Pekerja lama (orang) = 8
+Pekerja baru (orang) = 5
+Waktu (hari) = 20
+Contoh Keluaran
+Waktu penyelesaian pekerjaan (hari) = 32
