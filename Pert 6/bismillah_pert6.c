@@ -10,7 +10,7 @@ typedef struct
     int nim;
     char nama[50];
     char kelas[10];
-    char gender[1];
+    char gender;
     int tugas;
     int uts;
     int uas;
@@ -22,37 +22,20 @@ typedef struct
 int urutan;
 mhs data[50];
 
-// float rumus_akhir(int NA)
-// {
-//     int i,x;
-//     float nilai_akhir;
-//     for (x=0;x<=urutan;x++)
-//     {
-//         if (x=NA)
-//         {
-//             nilai_akhir = (data[x].tugas*30/100) + (data[x].uts*30/100) + (data[x].uas*40/100);
-//         }
-//     }
-    
-//     return (nilai_akhir);
-// }
-
-void rerata()
+float rerata()
 {
     int i=0;
-    float rerata;
+    float hasil;
 
-    for (i=0;i<urutan;i++)
+    for (i=0;i<=urutan;i++)
     {
-        rerata += data[i].akhir;
+        hasil = hasil + data[i].akhir;
     }
-    rerata /= i+1;
-
-    p("*******************************************************************************\n");
-    p("*********************** Nilai Rata-rata Mahasiswa : %.1f **********************\n\n",rerata);
+    float rerata = hasil/i;
+    return (rerata);
 }
 
-void terkecil()
+float terkecil()
 {
     int i=0;
     float terkecil = data[i].akhir;
@@ -64,32 +47,29 @@ void terkecil()
 			terkecil = data[i].akhir;
 		}
 	}
-
-    p("*******************************************************************************\n");
-    p("*********************** Nilai Terkecil Mahasiswa : %.1f ***********************\n\n",terkecil);
+    return (terkecil);
 }
 
-void terbesar()
+float terbesar()
 {
     int i=0;
 	float terbesar = data[i].akhir;
 
-	for(i; i<=urutan; i++){
-		if(data[i].akhir>=terbesar){
+	for(i; i<=urutan; i++)
+    {
+		if(data[i].akhir>=terbesar)
+        {
 			terbesar = data[i].akhir;
 		}
 	}
-
-    p("\n*******************************************************************************\n");
-    p("*********************** Nilai Terbesar Mahasiswa : %.1f ***********************\n\n",terbesar);
-
+    return (terbesar);
 }
 
 void print_data()
 {
     int i;
-    p("*******************************************************************************\n");
-    p("************************ Program Nilai Akhir Siswa ****************************\n");
+    p("\n\n\n\n\n*******************************************************************************\n");
+    p("************************ Program Nilai Akhir Mahasiswa ************************\n");
     p("********* (Muzakki Abdillah, 2000532, muzakki.abdillah123@upi.edu) ************\n");
 
     for (i=0;i<=urutan;i++)
@@ -156,14 +136,30 @@ void print_data()
         p("Indeks Huruf Mahasiswa\t: %s\n", data[i].index);
         p("Mutu Mahasiswa\t\t: %.1f\n", data[i].mutu);
     }
+    
+    float p_terbesar = terbesar();
+    p("\n*******************************************************************************\n");
+    p("*********************** Nilai Terbesar Mahasiswa : %.1f ***********************\n\n",p_terbesar);
+
+    float p_terkecil = terkecil();
+    p("*******************************************************************************\n");
+    p("*********************** Nilai Terkecil Mahasiswa : %.1f ***********************\n\n",p_terkecil);
+
+    float p_rerata = rerata();
+    p("*******************************************************************************\n");
+    p("*********************** Nilai Rata-rata Mahasiswa : %.2f *********************\n\n",p_rerata);
+
+    p("\n***************************** Copyright @ 2021 ********************************\n\n");
+    
 }
 
 void isian()
 {
     int lanjut;
+    char ulangi;
     do
     {
-        p("\n*********************** Masukkan data Mahasiswa ke-%d **************************\n",urutan+1);
+        p("\n\n\n\n\n*********************** Masukkan data Mahasiswa ke-%d **************************\n",urutan+1);
         p("Masukkan NIM Mahasiswa\t\t\t: ");
         s("%d", &data[urutan].nim);
         p("Masukkan Nama Mahasiswa\t\t\t: ");
@@ -181,26 +177,22 @@ void isian()
 
         do
         {
-            p("\n# PILIHAN MENU\n");
-            p("[1] Tambah Data\n");
-            p("[2] Tampilkan Seluruh Data\n\n");
-            p("Silahkan pilih nomor menu lalu tekan enter : "); 
-            s("%d",&lanjut);
-            if (lanjut == 1)
+            p("Ingin menambah data lagi? Tekan (Y/N) dan enter : ");
+            s(" %c", &ulangi);
+            if (ulangi == 'Y')
             {
                 urutan++;
             }
-        } while (lanjut != 1 && lanjut != 2);
-    } while (lanjut == 1);    
+        } while (ulangi != 'Y' && ulangi != 'N');
+
+        p("\n***************************** Copyright @ 2021 ********************************\n\n");
+
+    } while (ulangi == 'Y');    
     
-    if (lanjut == 2)
+    if (ulangi == 'N')
     {
         print_data();
-        terbesar();
-        terkecil();
-        rerata();
     }
-    
 }
 
 int main(){
@@ -213,6 +205,7 @@ int main(){
     p("[1] Memasukan dan Menampilkan Nilai Siswa \n\n");
     p("Silahkan pilih nomor menu lalu tekan enter : "); 
     s("%d",&masukan);
+    p("\n***************************** Copyright @ 2021 ********************************\n\n");
 
     if (masukan==1)
     {
