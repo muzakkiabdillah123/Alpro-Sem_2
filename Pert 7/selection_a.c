@@ -6,21 +6,21 @@
 int main()
 {
     int array[max]={34,67,23,28,98,15,89,67,28,18};
-    int i, temp, max_indeks, j;
+    int i, temp, min_indeks, j;
 
     for(i=0; i<(max-1); i++)
     {
-        max_indeks=i;
+        min_indeks=i;
         for(j=(i+1);j<max;j++)
         {
-            if(array[max_indeks]<array[j])
+            if(array[min_indeks]>array[j])
             {
-                max_indeks=j;
+                min_indeks=j;
             }
         }
         temp=array[i];
-        array[i]=array[max_indeks];
-        array[max_indeks]=temp;
+        array[i]=array[min_indeks];
+        array[min_indeks]=temp;
     }
     
     for(i=0;i<max;i++)
